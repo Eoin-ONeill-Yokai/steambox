@@ -15,5 +15,8 @@ distrobox create --image ghcr.io/eoin-oneill-yokai/steambox:stable --init-hooks 
 ```
 
 While it's not strictly necessary to call create with the `--home` flag, isolating the home directory of the distrobox steam prevents potential mixups with other versions of steam installed on the system. 
- 
 
+ ### Known (Steam) Problems
+
+ - For DS5 controllers, occasionally the controller will not be detected/registered with steam input when plugged in while steam is running. Rebooting steam should resolve the issue.
+ - On some systems, you might not have the correct firewall settings enabled for *Game File Transfer over Local Network*. On fedora systems, for example, make sure you configure your firewall so that all of steam's game transfer ports are supported (both the data broadcast and discovery ports.)
