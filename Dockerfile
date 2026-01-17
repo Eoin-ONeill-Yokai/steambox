@@ -11,3 +11,6 @@ RUN dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 # Install steam via repository
 RUN dnf update -y && dnf install -y steam
+
+# Install dependencies for SteamOS-Devkit Client (https://gitlab.steamos.cloud/devkit/steamos-devkit)
+RUN dnf install -y python3-devel gcc-c++
